@@ -1,6 +1,5 @@
 export class Ong {
-  id: string;
-  nome: string;
   cnpj: string;
+  nome: string;
   telefone: string;
 }

@@ -25,18 +25,18 @@ export class OngsController {
     return this.ongsService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.ongsService.findOne(+id);
+  @Get(':cnpj')
+  findOne(@Param('cnpj') cnpj: string) {
+    return this.ongsService.findOne(cnpj);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateOngDto: UpdateOngDto) {
-    return this.ongsService.update(+id, updateOngDto);
+  @Patch(':cnpj')
+  update(@Param('cnpj') cnpj: string, @Body() updateOngDto: UpdateOngDto) {
+    return this.ongsService.update(cnpj, updateOngDto);
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.ongsService.remove(+id);
+  @Delete(':cnpj')
+  remove(@Param('cnpj') cnpj: string) {
+    return this.ongsService.remove(cnpj);
   }
 }
